@@ -4,7 +4,7 @@
   "description": "LeetCode Monthly Challenge",
   "main": "index.ts",
   "scripts": {
-    "test": "jest",
+    "test": "jest --coverage",
     "validate-ts": "node_modules/.bin/ttsc -p tsconfig.json --noEmit"
   },
   "author": "Cool Lime",
@@ -13,7 +13,7 @@
     "@babel/core": "^7.10.5",
     "@babel/preset-env": "^7.10.4",
     "@babel/preset-typescript": "^7.10.4",
-    "@types/jest": "^26.0.4",
+    "@types/jest": "^26.0.5",
     "@typescript-eslint/eslint-plugin": "^3.6.1",
     "@typescript-eslint/parser": "^3.6.1",
     "babel-jest": "^26.1.0",
@@ -26,6 +26,7 @@
     "jest": "^26.1.0",
     "lint-staged": "^10.2.11",
     "prettier": "^2.0.5",
+    "ts-jest": "^26.1.3",
     "typescript": "^3.9.7"
   },
   "husky": {
@@ -39,8 +40,7 @@
       "node_modules",
       "src"
     ],
-    "testEnvironment": "node",
-    "transform": "undefined"
+    "testEnvironment": "node"
   },
   "lint-staged": {
     "*.{ts,js}": "eslint --cache --fix",
