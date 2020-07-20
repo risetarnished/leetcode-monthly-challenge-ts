@@ -18,11 +18,6 @@ describe('Course Schedule II Tests', () => {
     ).toEqual([]);
   });
 
-  it('should not schedule courses when the provided prerequisites information is not valid', () => {
-    expect(findOrder(2, null)).toEqual([]);
-    expect(findOrder(2, undefined)).toEqual([]);
-  });
-
   it('should schedule courses', () => {
     expect(
       findOrder(4, [

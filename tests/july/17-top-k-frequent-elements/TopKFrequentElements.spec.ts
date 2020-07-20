@@ -4,7 +4,7 @@ import topKFrequent from '../../../src/july/17-top-k-frequent-elements/TopKFrequ
 
 describe('Top K Frequent Elements Tests', () => {
   it('should not get anything when the input is invalid', () => {
-    expect(topKFrequent(undefined, 0)).toEqual([]);
+    expect(topKFrequent([], 0)).toEqual([]);
   });
 
   it('should not get anything when the input is empty', () => {
