@@ -23,8 +23,11 @@ jobs:
       - uses: actions/checkout@v2
 
       # Runs a single command using the runners shell
+      - name: Install required packages
+        run: npm i
+
       - name: Validate TypeScript
         run: npm run validate-ts
 
-      - name: Unit Tests
+      - name: Run Unit Tests
         run: npm run test

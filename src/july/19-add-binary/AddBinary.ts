@@ -73,7 +73,7 @@ const addBinary = (a: string, b: string): string => {
     a.length < 1 ||
     b.length > 10 ** 4
   ) {
-    return undefined;
+    return '';
   }
   const aArray = Array.from(a);
   const bArray = Array.from(b);

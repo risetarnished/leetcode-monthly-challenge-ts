@@ -5,7 +5,7 @@
   "main": "index.ts",
   "scripts": {
     "test": "jest --coverage",
-    "validate-ts": "node_modules/.bin/ttsc -p tsconfig.json --noEmit"
+    "validate-ts": "node_modules/.bin/tsc -p tsconfig.json --noEmit"
   },
   "author": "Cool Lime",
   "license": "MIT",
