@@ -5,7 +5,7 @@ const updateFrequency = (num: number, frequency: Map<number, number>): void => {
   frequency.set(num, currentFrequncy + 1);
 };
 
-const topKFrequent = (nums: number[], k: number): number[] => {
+export const topKFrequent = (nums: number[], k: number): number[] => {
   if (!Array.isArray(nums) || !nums.length || nums.length < k) {
     return [];
   }

@@ -35,7 +35,10 @@ function scheduleCourses(
   }
 }
 
-function findOrder(numCourses: number, prerequisites: number[][]): number[] {
+export function findOrder(
+  numCourses: number,
+  prerequisites: number[][]
+): number[] {
   if (numCourses <= 0 || !Array.isArray(prerequisites)) {
     return [];
   }

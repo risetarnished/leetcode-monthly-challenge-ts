@@ -1,4 +1,4 @@
-import addBinary from '../../../src/july/19-add-binary/AddBinary';
+import { addBinary } from '../../../src/public_apis';
 
 describe('Add Binary Tests', () => {
   it('should not add the numbers when the input numbers are invalid', () => {
