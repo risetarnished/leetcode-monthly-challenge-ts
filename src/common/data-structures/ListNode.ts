@@ -11,7 +11,7 @@ export class ListNode {
   }
 
   static buildList = (nodes: number[]): ListNode | null => {
-    if (!ArrayHelper.isValidateArray(nodes)) {
+    if (!ArrayHelper.isValidArray(nodes)) {
       return null;
     }
     const dummy = new ListNode();

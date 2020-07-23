@@ -1,6 +1,10 @@
 import { ListNode, removeElements } from '../../../src/public_apis';
 
 describe('Remove Linked List Elements Tests', () => {
+  afterEach(() => {
+    expect.hasAssertions();
+  });
+
   it('should not do anything when the linked list is empty', () => {
     expect(removeElements(null, 0)).toEqual(new ListNode());
     expect(removeElements(new ListNode(), 0)).toEqual(new ListNode());

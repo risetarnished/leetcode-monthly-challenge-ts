@@ -1,6 +1,10 @@
 import { topKFrequent } from '../../../src/public_apis';
 
 describe('Top K Frequent Elements Tests', () => {
+  afterEach(() => {
+    expect.hasAssertions();
+  });
+
   it('should not get anything when the input is invalid', () => {
     expect(topKFrequent([], 0)).toEqual([]);
   });

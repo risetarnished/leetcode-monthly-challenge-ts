@@ -1,6 +1,10 @@
 import { addBinary } from '../../../src/public_apis';
 
 describe('Add Binary Tests', () => {
+  afterEach(() => {
+    expect.hasAssertions();
+  });
+
   it('should not add the numbers when the input numbers are invalid', () => {
     expect(addBinary('', '0')).toEqual('');
   });
