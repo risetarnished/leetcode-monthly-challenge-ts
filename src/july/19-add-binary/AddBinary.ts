@@ -64,7 +64,7 @@ const addDigits = (a: string[], b: string[]): string => {
   return result.join('');
 };
 
-const addBinary = (a: string, b: string): string => {
+export const addBinary = (a: string, b: string): string => {
   if (
     a === null ||
     a === undefined ||
