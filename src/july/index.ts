@@ -3,3 +3,4 @@ export * from './18-course-schedule-ii/CourseScheduleII';
 export * from './19-add-binary/AddBinary';
 export * from './20-remove-linked-list-elements/RemoveLinkedListElements';
 export * from './21-word-search/WordSearch';
+export * from './22-binary-tree-zigzag-level-order-traversal/BinaryTreeZigzagLevelOrderTraversal';
