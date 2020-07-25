@@ -50,7 +50,7 @@
   },
   "lint-staged": {
     "*.{ts,js}": "eslint --cache --fix",
-    "*.{ts,js,json}": "prettier --write",
+    "*.{ts,js,json,md}": "prettier --write",
     "package.json": [
       "prettier-package-json --write"
     ]
