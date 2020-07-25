@@ -5,3 +5,4 @@ export * from './20-remove-linked-list-elements/RemoveLinkedListElements';
 export * from './21-word-search/WordSearch';
 export * from './22-binary-tree-zigzag-level-order-traversal/BinaryTreeZigzagLevelOrderTraversal';
 export * from './23-single-number-iii/SingleNumberIII';
+export * from './24-all-paths-from-source-to-target/AllPathsFromSourceToTarget';
