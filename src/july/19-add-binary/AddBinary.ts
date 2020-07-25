@@ -22,10 +22,8 @@ const addDigits = (a: string[], b: string[]): string => {
       digit = '1';
       shouldCarry = false;
     }
-    if (digit) {
-      result[index] = digit;
-      index -= 1;
-    }
+    result[index] = digit;
+    index -= 1;
   }
   while (a.length) {
     let digit = a.pop();
