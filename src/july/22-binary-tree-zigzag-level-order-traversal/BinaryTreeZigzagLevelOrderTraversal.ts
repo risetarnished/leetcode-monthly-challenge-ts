@@ -15,6 +15,7 @@ export const zigzagLevelOrder = (root: TreeNode | null): number[][] => {
     const levelResult: number[] = [];
     for (let i = 0; i < levelSize; i += 1) {
       const current = isEven ? queue.pop() : queue.shift();
+      /* istanbul ignore else */
       if (current) {
         levelResult.push(current.val);
         if (isEven) {

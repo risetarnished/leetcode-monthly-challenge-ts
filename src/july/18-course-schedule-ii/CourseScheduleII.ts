@@ -23,6 +23,7 @@ function scheduleCourses(
     return;
   }
   const currentPrerequisites = map.get(currentCourse);
+  /* istanbul ignore else */
   if (
     !currentPrerequisites ||
     prerequisitesCleared(map, currentCourse, coursesTaken)
