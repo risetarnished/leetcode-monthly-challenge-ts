@@ -36,6 +36,7 @@ const addDigits = (a: string[], b: string[]): string => {
     } else {
       shouldCarry = false;
     }
+    /* istanbul ignore next */
     if (digit) {
       result[index] = digit;
       index -= 1;
@@ -52,6 +53,7 @@ const addDigits = (a: string[], b: string[]): string => {
     } else {
       shouldCarry = false;
     }
+    /* istanbul ignore next */
     if (digit) {
       result[index] = digit;
       index -= 1;
