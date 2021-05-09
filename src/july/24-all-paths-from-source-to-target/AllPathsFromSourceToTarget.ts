@@ -1,20 +1,20 @@
 const findAllPaths = (
   graph: number[][],
   index: number,
-  path: number[],
+  paths: number[],
   result: number[][]
 ): void => {
   // Base case: when we reach the end/target
   if (index === graph.length - 1) {
-    path.push(index);
-    result.push(Array.from(path));
-    path.pop();
+    paths.push(index);
+    result.push(Array.from(paths));
+    paths.pop();
     return;
   }
   graph[index].forEach((edge) => {
-    path.push(index);
-    findAllPaths(graph, edge, path, result);
-    path.pop();
+    paths.push(index);
+    findAllPaths(graph, edge, paths, result);
+    paths.pop();
   });
 };
 

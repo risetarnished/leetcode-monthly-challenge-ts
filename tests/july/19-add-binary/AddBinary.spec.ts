@@ -1,4 +1,4 @@
-import { addBinary } from '../../../src/public_apis';
+import { addBinary } from '../../../src/july/19-add-binary/AddBinary';
 
 describe('Add Binary Tests', () => {
   afterEach(() => {

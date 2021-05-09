@@ -1,4 +1,4 @@
-import { allPathsSourceTarget } from '../../../src/public_apis';
+import { allPathsSourceTarget } from '../../../src/july/24-all-paths-from-source-to-target/AllPathsFromSourceToTarget';
 
 describe('All Paths from Source to Target Tests', () => {
   afterEach(() => {

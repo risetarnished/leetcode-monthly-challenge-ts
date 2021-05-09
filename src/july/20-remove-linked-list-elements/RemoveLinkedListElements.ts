@@ -21,7 +21,7 @@ export const removeElements = (
   }
   // After this step, head points to the first node with a different value
   // Keep the reference of the head for the result
-  let previous: ListNode = new ListNode();
+  let previous = new ListNode();
   let current = head;
   while (current && current.next) {
     let { next } = current;

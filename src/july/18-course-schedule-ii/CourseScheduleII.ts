@@ -1,60 +1,89 @@
 // https://leetcode.com/explore/challenge/card/july-leetcoding-challenge/546/week-3-july-15th-july-21st/3394/
 
-function prerequisitesCleared(
-  map: Map<number, number[]>,
-  currentCourse: number,
+const isEveryPrerequisiteCleared = (
+  prerequisitesMap: Map<number, number[]>,
+  currentCourseNumber: number,
   coursesTaken: Set<number>
-): boolean {
-  const prerequisites = map.get(currentCourse);
+): boolean => {
+  const prerequisites: number[] | undefined = prerequisitesMap.get(
+    currentCourseNumber
+  );
   return (
     Array.isArray(prerequisites) &&
+    prerequisites &&
     prerequisites.every((course) => coursesTaken.has(course))
   );
-}
+};
 
-function scheduleCourses(
+const scheduleCourses = (
   numCourses: number,
-  currentCourse: number,
-  map: Map<number, number[]>,
+  currentCourseNumber: number,
+  prerequisitesMap: Map<number, number[]>,
   coursesTaken: Set<number>,
-  result: number[]
-): void {
-  if (currentCourse === numCourses) {
+  courseSchedule: number[]
+): void => {
+  if (currentCourseNumber === numCourses) {
     return;
   }
-  const currentPrerequisites = map.get(currentCourse);
+  const currentPrerequisites: number[] | undefined = prerequisitesMap.get(
+    currentCourseNumber
+  );
   /* istanbul ignore else */
   if (
     !currentPrerequisites ||
-    prerequisitesCleared(map, currentCourse, coursesTaken)
+    isEveryPrerequisiteCleared(
+      prerequisitesMap,
+      currentCourseNumber,
+      coursesTaken
+    )
   ) {
-    coursesTaken.add(currentCourse);
-    result.push(currentCourse);
-    scheduleCourses(numCourses, currentCourse + 1, map, coursesTaken, result);
+    coursesTaken.add(currentCourseNumber);
+    courseSchedule.push(currentCourseNumber);
+    scheduleCourses(
+      numCourses,
+      currentCourseNumber + 1,
+      prerequisitesMap,
+      coursesTaken,
+      courseSchedule
+    );
   } else {
-    scheduleCourses(numCourses, currentCourse + 1, map, coursesTaken, result);
+    scheduleCourses(
+      numCourses,
+      currentCourseNumber + 1,
+      prerequisitesMap,
+      coursesTaken,
+      courseSchedule
+    );
   }
-}
+};
 
-export function findOrder(
+export const findOrder = (
   numCourses: number,
   prerequisites: number[][]
-): number[] {
+): number[] => {
   if (numCourses <= 0 || !Array.isArray(prerequisites)) {
     return [];
   }
-  const map: Map<number, number[]> = new Map<number, number[]>();
+  const prerequisitesMap = new Map<number, number[]>();
   prerequisites.forEach((coursePair) => {
-    const currentPrerequisites = map.get(coursePair[0]);
+    const currentPrerequisites: number[] | undefined = prerequisitesMap.get(
+      coursePair[0]
+    );
     if (!currentPrerequisites) {
-      map.set(coursePair[0], [coursePair[1]]);
+      prerequisitesMap.set(coursePair[0], [coursePair[1]]);
     } else {
       currentPrerequisites.push(coursePair[1]);
     }
   });
-  const result: number[] = [];
-  scheduleCourses(numCourses, 0, map, new Set<number>(), result);
-  return result;
-}
+  const courseSchedule: number[] = [];
+  scheduleCourses(
+    numCourses,
+    0,
+    prerequisitesMap,
+    new Set<number>(),
+    courseSchedule
+  );
+  return courseSchedule;
+};
 
 export default findOrder;

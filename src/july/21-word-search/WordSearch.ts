@@ -58,7 +58,7 @@ export const exist = (board: string[][], word: string): boolean => {
   }
   const row = board.length;
   const col = board[0].length;
-  const visited: Map<string, boolean> = new Map<string, boolean>();
+  const visited = new Map<string, boolean>();
   for (let i = 0; i < row; i += 1) {
     for (let j = 0; j < col; j += 1) {
       if (

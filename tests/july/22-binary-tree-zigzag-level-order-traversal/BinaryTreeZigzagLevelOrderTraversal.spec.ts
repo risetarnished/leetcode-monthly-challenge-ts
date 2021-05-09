@@ -1,4 +1,5 @@
-import { TreeNode, zigzagLevelOrder } from '../../../src/public_apis';
+import { TreeNode } from '../../../src/common';
+import { zigzagLevelOrder } from '../../../src/july/22-binary-tree-zigzag-level-order-traversal/BinaryTreeZigzagLevelOrderTraversal';
 
 describe('Binary Tree Zigzag Level Order Traversal Tests', () => {
   //        3

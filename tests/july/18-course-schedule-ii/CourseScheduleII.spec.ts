@@ -1,4 +1,4 @@
-import { findOrder } from '../../../src/public_apis';
+import { findOrder } from '../../../src/july/18-course-schedule-ii/CourseScheduleII';
 
 describe('Course Schedule II Tests', () => {
   afterEach(() => {
