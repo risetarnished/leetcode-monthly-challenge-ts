@@ -1,4 +1,5 @@
-import { buildTree, TreeNode } from '../../../src/public_apis';
+import { TreeNode } from '../../../src/common';
+import { buildTree } from '../../../src/july/27-construct-binary-tree-from-inorder-and-postorder-traversal/ConstructBinaryTreeFromInorderAndPostorderTraversal';
 
 // const preorderPrintNodes = (root: TreeNode | null): void => {
 //   const queue = [root];
@@ -17,8 +18,8 @@ import { buildTree, TreeNode } from '../../../src/public_apis';
 // };
 
 describe('Construct Binary Tree From Inorder And Postorder Traversal Tests', () => {
-  const inorder: number[] = [9, 3, 15, 20, 7];
-  const postorder: number[] = [9, 15, 7, 20, 3];
+  const inorder = [9, 3, 15, 20, 7];
+  const postorder = [9, 15, 7, 20, 3];
 
   afterEach(() => {
     expect.hasAssertions();

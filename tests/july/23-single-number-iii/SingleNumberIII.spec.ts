@@ -1,4 +1,4 @@
-import { singleNumber } from '../../../src/public_apis';
+import { singleNumber } from '../../../src/july/23-single-number-iii/SingleNumberIII';
 
 describe('Single Number III Tests', () => {
   afterEach(() => {

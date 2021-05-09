@@ -1,4 +1,4 @@
-import { findMin } from '../../../src/public_apis';
+import { findMin } from '../../../src/july/25-find-minimum-in-rotated-sorted-array-ii/FindMinimumInRotatedSortedArrayII';
 
 describe('Find Minimum in Rotated Sorted Array II tests', () => {
   afterEach(() => {

@@ -1,4 +1,5 @@
-import { ListNode, removeElements } from '../../../src/public_apis';
+import { ListNode } from '../../../src/common';
+import { removeElements } from '../../../src/july/20-remove-linked-list-elements/RemoveLinkedListElements';
 
 describe('Remove Linked List Elements Tests', () => {
   afterEach(() => {

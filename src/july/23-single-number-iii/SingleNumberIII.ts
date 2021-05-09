@@ -2,7 +2,7 @@ export const singleNumber = (nums: number[]): number[] => {
   if (!Array.isArray(nums) || !nums.length) {
     return [];
   }
-  const frequency: Map<number, number> = new Map<number, number>();
+  const frequency = new Map<number, number>();
   nums.forEach((num) => {
     const freq = frequency.get(num);
     if (freq) {

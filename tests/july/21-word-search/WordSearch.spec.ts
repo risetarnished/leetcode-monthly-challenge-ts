@@ -1,4 +1,4 @@
-import { exist } from '../../../src/public_apis';
+import { exist } from '../../../src/july/21-word-search/WordSearch';
 
 describe('Word Search Tests', () => {
   const board: string[][] = [

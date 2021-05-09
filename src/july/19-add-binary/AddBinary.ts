@@ -2,7 +2,7 @@
 // This solution has way too many logics. I shall try writing a java version and see if I can get some simpler idea
 
 const addDigits = (a: string[], b: string[]): string => {
-  let result: string[] = new Array<string>(Math.max(a.length, b.length) + 1);
+  let result = new Array<string>(Math.max(a.length, b.length) + 1);
   let shouldCarry = false;
   let index = result.length - 1;
   while (a.length && b.length) {
@@ -65,18 +65,11 @@ const addDigits = (a: string[], b: string[]): string => {
 };
 
 export const addBinary = (a: string, b: string): string => {
-  if (
-    a === null ||
-    a === undefined ||
-    b === null ||
-    b === undefined ||
-    a.length < 1 ||
-    b.length > 10 ** 4
-  ) {
+  if (!a || !b || !a.length || b.length > 10 ** 4) {
     return '';
   }
-  const aArray = Array.from(a);
-  const bArray = Array.from(b);
+  const aArray: string[] = Array.from(a);
+  const bArray: string[] = Array.from(b);
   return addDigits(aArray, bArray);
 };
 
