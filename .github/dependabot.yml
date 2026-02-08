@@ -11,8 +11,6 @@ updates:
     open-pull-requests-limit: 10
     versioning-strategy: increase
     groups:
-      npm-security-and-patches:
-        applies-to: security-updates
       npm-minor-and-patch:
         patterns:
           - "*"
@@ -36,8 +34,6 @@ updates:
       timezone: "UTC"
     open-pull-requests-limit: 5
     groups:
-      github-actions-security-and-patches:
-        applies-to: security-updates
       github-actions-minor-and-patch:
         patterns:
           - "*"
