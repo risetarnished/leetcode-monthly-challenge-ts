@@ -27,6 +27,14 @@ No guarantees that I will do it => I'm doing this in a real casual style anyway 
 
   Not a lot, but you do still need to make sure to run **`npm install`** first
 
+## Security
+
+- Automated dependency updates are enabled via Dependabot (`.github/dependabot.yml`)
+- Security CI (`.github/workflows/security.yml`) runs `npm audit --audit-level=high` and Gitleaks secret scanning
+- Dependency Review runs on every pull request (`.github/workflows/dependency-review.yml`)
+- CodeQL static analysis runs on push, pull requests, and a weekly schedule (`.github/workflows/codeql.yml`)
+- Please read `SECURITY.md` for responsible vulnerability reporting
+
 ## License
 
 MIT
