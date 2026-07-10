@@ -6,6 +6,7 @@
   "version": "1.0.0",
   "main": "index.ts",
   "scripts": {
+    "lint": "oxlint",
     "test": "jest --coverage",
     "validate-ts": "tsc -p tsconfig.json --noEmit"
   },
@@ -14,17 +15,11 @@
     "@babel/preset-env": "^7.28.3",
     "@babel/preset-typescript": "^7.27.1",
     "@types/jest": "^30.0.0",
-    "@typescript-eslint/eslint-plugin": "^8.43.0",
-    "@typescript-eslint/parser": "^8.43.0",
     "babel-jest": "^30.2.0",
-    "eslint": "^8.57.1",
-    "eslint-config-airbnb-base": "^15.0.0",
-    "eslint-config-prettier": "^10.1.8",
-    "eslint-plugin-import": "^2.32.0",
-    "eslint-plugin-prettier": "^5.5.4",
     "husky": "^9.1.7",
     "jest": "^30.2.0",
     "lint-staged": "^16.1.5",
+    "oxlint": "^1.72.0",
     "prettier": "^3.6.2",
     "prettier-package-json": "^2.8.0",
     "ts-jest": "^29.4.6",
@@ -59,7 +54,7 @@
     "testEnvironment": "node"
   },
   "lint-staged": {
-    "*.{ts,js}": "eslint --cache --fix",
+    "*.{ts,js}": "oxlint --fix",
     "*.{ts,js,json,md}": "prettier --write",
     "package.json": [
       "prettier-package-json --write"
