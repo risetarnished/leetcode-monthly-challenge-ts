@@ -11,7 +11,7 @@
     "validate-ts": "tsc -p tsconfig.json --noEmit"
   },
   "devDependencies": {
-    "@babel/core": "^7.28.3",
+    "@babel/core": "^8.0.1",
     "@babel/preset-env": "^7.28.3",
     "@babel/preset-typescript": "^7.27.1",
     "@types/jest": "^30.0.0",
